@@ -1,0 +1,244 @@
+{
+	"info": {
+		"_postman_id": "a0fb7f8a-b95c-46df-a5dc-3a82f9d68c1b",
+		"name": "Scrumer Test ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"jejoalca14@gmail.com\",\n\t\"password\": \"123456\",\n\t\"confirm_password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register"
+					]
+				},
+				"description": "REGISTER A CLIENT OF HOTEL"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"jejoalca14@gmail.com\",\n\t\"password\": \"123456\",\n\t\"confirm_password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				},
+				"description": "ACCESS TO THE HOTEL APP"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/room/3/availability",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjozOCwiZW1haWwiOiJqZWpvYWxjYTE0QGdtYWlsLmNvbSIsInN0YXR1cyI6IjEifSwiaWF0IjoxNTc4NDUyNzMwLCJleHAiOjE1Nzg0NTUzMjJ9.8CsQBvYTMaHWP_UTeqMPuhyIpWfW2TejvbmJsqpnJXY",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"checkin\": \"2020-02-01\",\n\t\"checkout\": \"2020-02-09\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/room/3/availability",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"room",
+						"3",
+						"availability"
+					]
+				},
+				"description": "Check room available"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/room/3/reservation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjozOCwiZW1haWwiOiJqZWpvYWxjYTE0QGdtYWlsLmNvbSIsInN0YXR1cyI6IjEifSwiaWF0IjoxNTc4NDQ5NDkyLCJleHAiOjE1Nzg0NTIwODR9.JYF7q3m7--1cF2hTIjtMeBk4KoRONM0ircGBl0yWHQg",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user_id\": 38,\n\t\"checkin\": \"2020-05-01\",\n\t\"checkout\": \"2020-08-01\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/room/3/reservation",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"room",
+						"3",
+						"reservation"
+					]
+				},
+				"description": "Client makes a reservation in a room."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/room/3/reservation/19",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjozOCwiZW1haWwiOiJqZWpvYWxjYTE0QGdtYWlsLmNvbSIsInN0YXR1cyI6IjEifSwiaWF0IjoxNTc4NDQ5NDkyLCJleHAiOjE1Nzg0NTIwODR9.JYF7q3m7--1cF2hTIjtMeBk4KoRONM0ircGBl0yWHQg",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"checkin\": \"2020-05-01\",\n\t\"checkout\": \"2020-08-01\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/room/3/reservation/19",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"room",
+						"3",
+						"reservation",
+						"19"
+					]
+				},
+				"description": "Update dates of the reservation."
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/room/3/reservation/19",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjozOCwiZW1haWwiOiJqZWpvYWxjYTE0QGdtYWlsLmNvbSIsInN0YXR1cyI6IjEifSwiaWF0IjoxNTc4NDQ5NDkyLCJleHAiOjE1Nzg0NTIwODR9.JYF7q3m7--1cF2hTIjtMeBk4KoRONM0ircGBl0yWHQg",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/room/3/reservation/20",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"room",
+						"3",
+						"reservation",
+						"20"
+					]
+				},
+				"description": "Delete the reservation."
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

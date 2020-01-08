@@ -1,0 +1,23 @@
+{
+    "name": "Node-Scrummer-Test",
+    "version": "1.0.0",
+    "description": "This a backend test to CHotel",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon src/server.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Jeferson J. Alvarado C.",
+    "license": "ISC",
+    "dependencies": {
+        "bcrypt": "^3.0.6",
+        "body-parser": "^1.18.2",
+        "dotenv": "^8.2.0",
+        "express": "^4.16.2",
+        "express-fileupload": "^1.1.6-alpha.5",
+        "express-validator": "^5.3.1",
+        "jsonwebtoken": "^8.2.0",
+        "mysql": "^2.17.1",
+        "underscore": "^1.8.3"
+    }
+}
