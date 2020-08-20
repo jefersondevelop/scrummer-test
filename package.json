@@ -10,7 +10,7 @@
     "author": "Jeferson J. Alvarado C.",
     "license": "ISC",
     "dependencies": {
-        "bcrypt": "^3.0.6",
+        "bcrypt": "^5.0.0",
         "body-parser": "^1.18.2",
         "dotenv": "^8.2.0",
         "express": "^4.16.2",
